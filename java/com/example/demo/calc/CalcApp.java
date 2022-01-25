@@ -2,10 +2,19 @@ package com.example.demo.calc;
 
 import org.springframework.http.converter.json.GsonBuilderUtils;
 
+
 /**
- * 숫자 2개와 연산자 1개를 받아서 계산하는 계산기를 코딩하시오
- * int,string
- **/
+ * packageName:  com.example.demo.calc
+ * fileName     : CalcApp.java
+ * author       : ahreum
+ * date         : 2022-01-25
+ * desc         : 숫자2개와 연산자 받아서 결과를 리턴하는 앱
+ * ================================
+ * DATE         AUTHOR        NOTE
+ * ================================
+ * 2022-01-25      ahreum        최초 생성
+ */
+
 public class CalcApp {
     static String CALC_TITLE = "계산기";
     int num1;

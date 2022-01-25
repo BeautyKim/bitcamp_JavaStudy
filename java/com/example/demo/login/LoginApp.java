@@ -1,8 +1,17 @@
 package com.example.demo.login;
+
 /**
- * 아이디, 비번, 이름을 받아서 계산하는 계산기를 코딩하시오
- * String,String,String
+ * packageName:  com.example.demo.calc
+ * fileName     : LoginApp.java
+ * author       : ahreum
+ * date         : 2022-01-25
+ * desc         : 아이디, 비번 이름을 받아서 로그인하는 앱
+ * ================================
+ * DATE         AUTHOR        NOTE
+ * ================================
+ * 2022-01-25      ahreum        최초 생성
  */
+
 public class LoginApp {
     String id;
     String pw;
