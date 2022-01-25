@@ -16,16 +16,26 @@ import org.springframework.http.converter.json.GsonBuilderUtils;
  */
 
 public class CalcApp {
-    static String CALC_TITLE = "계산기";
-    int num1;
-    String opcode;
-    int num2;
+    public static String CALC_TITLE = "계산기";
+    private int num1;
+    private String opcode;
+    private int num2;
 
     public String calc(int num1, String opcode, int num2){
         this.num1 = num1;
         this.num2 = num2;
         this.opcode = opcode;
-        int res = num1 + num2;
-        return String.format("%d %s %d = %d", this.num1, this.opcode, this.num2);
+        int res = 0;
+        if(opcode.equals("+")){
+            res = num1 + num2;
+        }else if(opcode.equals("-")){
+            res = num1 - num2;
+        }else if(opcode.equals("*")){
+            res = num1 * num2;
+        }else if(opcode.equals("/")){
+            res = num1 / num2;
+        }
+
+        return String.format("%d %s %d = %d", this.num1, this.opcode, this.num2, res);
     }
 }

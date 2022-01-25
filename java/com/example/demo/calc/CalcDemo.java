@@ -23,7 +23,7 @@ public class CalcDemo {
         System.out.println("첫번재 숫자 : ");
         int num1 = scanner.nextInt();
 
-        System.out.println("연산자 : ");
+        System.out.println("연산자 + - * / ");
         String opcode = scanner.next();
 
         System.out.println("두번재 숫자 : ");
