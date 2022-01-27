@@ -33,6 +33,7 @@ import java.util.SplittableRandom;
  */
 public class GradeApp {
     public static String GRADE_TITLE = "성적표";
+    private  int i;
     private String name;
     private int kor;
     private int eng;
