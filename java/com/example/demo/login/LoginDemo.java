@@ -15,23 +15,9 @@ import com.example.demo.bmi.BmiApp;
 import java.util.Scanner;
 
 public class LoginDemo {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public String execute(String name, String id, String pw) {
         LoginApp loginApp = new LoginApp();
-        System.out.println(LoginApp.LOGIN_APP);
-
-        System.out.println("이름: ");
-        String name = scanner.next();
-
-        System.out.println("아이디: ");
-        String id = scanner.next();
-
-        System.out.println("비밀번호: ");
-        String pw = scanner.next();
-
-        String res = loginApp.login(id, pw, name);
-        System.out.println(res);
-
+        return loginApp.login(id, pw, name);
 
     }
 }

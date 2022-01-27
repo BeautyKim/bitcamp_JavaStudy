@@ -20,7 +20,7 @@ public class BmiApp {
     private String height;
     private String weight;
 
-    public String bmi(String name, String height, String weight){
+    public String getBMI(String name, String height, String weight){
         this.name = name;
         this.height = height;
         this.weight = weight;

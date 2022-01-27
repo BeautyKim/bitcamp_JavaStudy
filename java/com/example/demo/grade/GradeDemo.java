@@ -14,8 +14,9 @@ import java.util.Scanner;
  * 2022-01-26      ahreum        최초 생성
  */
 public class GradeDemo {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public String execute(String name, int kor, int eng, int math) {
+       return "";
+        /* Scanner scanner = new Scanner(System.in);
         GradeApp gradeApp = new GradeApp();
 
         for(int i=1; i<=2; i++){
@@ -31,5 +32,8 @@ public class GradeDemo {
             String grade = gradeApp.getGrade(name, kor, eng, math);
             System.out.println(grade);
         }
+
+        */
     }
+
 }

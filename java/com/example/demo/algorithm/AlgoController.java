@@ -35,8 +35,7 @@ public class AlgoController {
             switch (scanner.next()){
                 case "0":
                     System.out.println("Exit"); return;
-                case "1":
-                    System.out.println(stack.solution(null));break;
+                case "1":;break;
                     default:
                         System.out.println("메뉴");
             }
