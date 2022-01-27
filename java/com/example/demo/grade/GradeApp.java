@@ -33,7 +33,6 @@ import java.util.SplittableRandom;
  */
 public class GradeApp {
     public static String GRADE_TITLE = "성적표";
-    private  int i;
     private String name;
     private int kor;
     private int eng;
@@ -44,6 +43,7 @@ public class GradeApp {
         this.kor = kor;
         this.eng = eng;
         this.math = math;
+
         int total = kor+ eng + math;
         int avg = total / 3;
         String pass = (avg >= 60) ? "합격" : "불합격";

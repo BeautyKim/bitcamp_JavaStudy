@@ -17,6 +17,7 @@ public class GradeDemo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         GradeApp gradeApp = new GradeApp();
+
         for(int i=1; i<=2; i++){
             System.out.println(i+"번 학생 \n 이름: ");
             String name = scanner.next();
@@ -28,7 +29,7 @@ public class GradeDemo {
             int math = scanner.nextInt();
 
             String grade = gradeApp.getGrade(name, kor, eng, math);
-            System.out.println(i+ grade);
+            System.out.println(grade);
         }
     }
 }
