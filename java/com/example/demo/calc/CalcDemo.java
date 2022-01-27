@@ -16,9 +16,10 @@ import java.util.Scanner;
  */
 
 public class CalcDemo {
-    public static void main(String[] args) {
+    public void execute() {
         Scanner scanner = new Scanner(System.in);
         CalcApp calcApp = new CalcApp();
+
         System.out.println(CalcApp.CALC_TITLE);
         System.out.println("첫번재 숫자 : ");
         int num1 = scanner.nextInt();
