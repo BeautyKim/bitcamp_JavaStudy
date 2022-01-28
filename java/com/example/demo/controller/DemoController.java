@@ -44,27 +44,28 @@ public class DemoController {
                     System.out.println("Exit"); return;
                 case "1": res = "BMI";
                     System.out.println(BmiApp.BMI+"\n이름, 키, 몸무게");
-                    System.out.println(bmiDemo.execute(scanner.next(),scanner.next(), scanner.next()));
+                    res = bmiDemo.execute(scanner.next(),scanner.next(), scanner.next());
                 break;
                 case "2": res = "CALC";
                     System.out.println(CalcApp.CALC_TITLE+"\n숫자1, 연산자, 숫자2 입력");
-                    System.out.println(calcDemo.execute(scanner.nextInt(),scanner.next(), scanner.nextInt()));
+                    res = calcDemo.execute(scanner.nextInt(),scanner.next(), scanner.nextInt());
                     break;
                 case "3": res = "SEARCH";
                     System.out.println(GoogleApp.GOOGLE_TITLE +"\n검색");
-                    System.out.println(googleDemo.execute(scanner.next()));
+                    res = googleDemo.execute(scanner.next());
                     break;
                 case "4": res = "GRADE";
                     System.out.println(GradeApp.GRADE_TITLE +"\n이름, 국어, 영어, 수학");
-                    System.out.println(gradeDemo.execute(scanner.next(),scanner.nextInt(), scanner.nextInt(), scanner.nextInt()));
+                    res = gradeDemo.execute(scanner.next(),scanner.nextInt(), scanner.nextInt(), scanner.nextInt());
                     break;
                 case "5": res = "LOGIN";
                     System.out.println(LoginApp.LOGIN_APP +"\n이름, 아이디, 비번");
-                    System.out.println(loginDemo.execute(scanner.next(),scanner.next(), scanner.next()));
+                    res = loginDemo.execute(scanner.next(),scanner.next(), scanner.next());
                     break;
                 default: res = "다시 입력해주세요.";
         }
             System.out.println(res);
+
 
         }
 
