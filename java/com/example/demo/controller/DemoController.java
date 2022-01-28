@@ -79,7 +79,6 @@ public class DemoController {
                     login.setId(scanner.next());
                     login.setPw(scanner.next());
                     login.setName(scanner.next());
-                    login.setPASSWORD(scanner.next());
                     res = loginService.getLogin(login);
                     break;
                 default: res = "다시 입력해주세요.";

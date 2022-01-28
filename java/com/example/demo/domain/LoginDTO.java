@@ -14,10 +14,10 @@ package com.example.demo.domain;
 
 public class LoginDTO {
     public static String LOGIN_APP = "로그인앱";
-        String id;
+    String id;
         String pw;
         String name;
-        static String PASSWORD = "abc";
+        public static String PASSWORD = "abc";
 
         public String getId(){
             return this.name;
@@ -37,11 +37,4 @@ public class LoginDTO {
         public void setName(String name){
             this.name = name;
         }
-        public String getPASSWORD(){
-            return this.PASSWORD;
-        }
-        public void setPASSWORD(String PASSWORD){
-            this.PASSWORD = PASSWORD;
-        }
-
 }
