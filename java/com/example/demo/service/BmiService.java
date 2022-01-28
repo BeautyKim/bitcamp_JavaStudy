@@ -1,6 +1,6 @@
-package com.example.demo.bmi;
+package com.example.demo.service;
 
-import java.util.Scanner;
+import com.example.demo.domain.BmiDTO;
 
 /**
  * packageName:  com.example.demo.bmi
@@ -13,14 +13,15 @@ import java.util.Scanner;
  * ================================
  * 2022-01-25      ahreum        최초 생성
  */
-public class BmiDemo {
-    public String execute(String name, String height, String weight) {
-        BmiApp bmiApp = new BmiApp();
-        return bmiApp.getBMI(name, height, weight);
+public class BmiService {
+    public String getBmi(BmiDTO bmi) {
+
+            return String.format("%s 정상", bmi.getName());
 
 
 
 
 
     }
+
 }

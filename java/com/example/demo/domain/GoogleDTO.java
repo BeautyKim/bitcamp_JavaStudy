@@ -1,4 +1,4 @@
-package com.example.demo.google;
+package com.example.demo.domain;
 
 /**
  * packageName:  com.example.demo.google
@@ -14,15 +14,15 @@ package com.example.demo.google;
  * ================================
  * 2022-01-25      ahreum        최초 생성
  */
-public class GoogleApp {
+public class GoogleDTO {
     public static String GOOGLE_TITLE = "Google";
     private String search;
 
-    public String google(String search){
-        this.search = search;
-        String res = "";
-        return String.format("검색 결과는 %s 입니다.", this.search);
+    public String getSearch(){
+        return this.search;
     }
-
+    public void setSearch(String search){
+        this.search = search;
+    }
 
 }
