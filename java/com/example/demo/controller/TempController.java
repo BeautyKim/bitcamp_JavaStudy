@@ -10,6 +10,12 @@ import java.util.Scanner;
  * author       : ahreum
  * date         : 2022-02-03
  * desc         :
+ * ATemd        :
+ *     김아름 : 스택, 큐, 힙
+ *     유재혁 : 해시, sort
+ *     장원종 : Brute Force, DFS, BFS
+ *     강민 : DP, 그래프
+ *     최건일 : Bin, Greedy
  * ================================
  * DATE         AUTHOR        NOTE
  * ================================
@@ -18,23 +24,22 @@ import java.util.Scanner;
 public class TempController {
     public static void main(String[] args) {
         Scanner scanner = new Scanner((System.in));
-        System.out.println("학생수 입력");
-        int count = scanner.nextInt();
-        GradeDTO[] grades = new GradeDTO[count];
+        String[] aTeamNames = {"김아름", "유재혁", "장원종",       "강민", "최건일"};
+        String[] aTeamSubjects = {"스택", "해시", "Brute Force",  "DP", "Bin",
+                                  "큐",  "sort", "DFC",         "그래프", "",
+                                  "힙",   "",       "BFS",          "",   "Greedy"};
 
 
-        for (int i = 0; i < grades.length; i++){
-            System.out.println("이름, 국어, 영어, 수학 점수입력");
-            grades[i] = new GradeDTO();
-            grades[i].setName(scanner.next());
-            grades[i].setMath(scanner.nextInt());
-            grades[i].setKor(scanner.nextInt());
-            grades[i].setEng(scanner.nextInt());
-            System.out.println("---------------------------------");
+
+        for(int i=0; i<aTeamNames.length; i++){
+            String res = "";
+            System.out.println(aTeamNames[i]
+                    +" : "+aTeamSubjects[i]
+                    + " , " + aTeamSubjects[i+5]
+                    +" , "+aTeamSubjects[i + 10]);
         }
-        for(int i = 0; i<grades.length; i++){
-            System.out.println("학생이름 "+grades[i].getName()+"\n수학점수 "+grades[i].getMath()+"\n영어점수 "+grades[i].getEng()+"\n국어점수 "+grades[i].getKor()+"\n--------------------------");
-        }
+
+
 
     }
 }
