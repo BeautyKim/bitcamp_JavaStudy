@@ -37,6 +37,8 @@ public class DemoController {
         GradeService gradeService = new GradeService();
         LoginDTO login = new LoginDTO();
         LoginService loginService =new LoginService();
+        TempController grades = new TempController();
+        TempController tempController = new TempController();
         while (true){
             System.out.println("메뉴 선택");
             String menu = "0.Exit 1.BMI 2.CALC 3.SEARCH 4.GRADE 5.LOGIN";
