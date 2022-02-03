@@ -23,20 +23,14 @@ import java.util.Scanner;
  */
 public class TempController {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner((System.in));
-        String[] aTeamNames = {"김아름", "유재혁", "장원종",       "강민", "최건일"};
-        String[] aTeamSubjects = {"스택", "해시", "Brute Force",  "DP", "Bin",
-                                  "큐",  "sort", "DFC",         "그래프", "",
-                                  "힙",   "",       "BFS",          "",   "Greedy"};
+        String[] arr = {"김아름", "유재혁", "장원종",     "강민", "최건일",
+                          "스택", "해시", "Brute Force",  "DP",   "Bin",
+                          "큐",  "sort", "DFC",         "그래프", "",
+                          "힙",   "",    "BFS",          "",   "Greedy"};
 
+        for (int i=0; i < 5; i++){
+            System.out.println(arr[i]+": "+arr[i + 5]+", "+arr[i + 10]+ ", "+arr[i+15]);
 
-
-        for(int i=0; i<aTeamNames.length; i++){
-            String res = "";
-            System.out.println(aTeamNames[i]
-                    +" : "+aTeamSubjects[i]
-                    + " , " + aTeamSubjects[i+5]
-                    +" , "+aTeamSubjects[i + 10]);
         }
 
 
