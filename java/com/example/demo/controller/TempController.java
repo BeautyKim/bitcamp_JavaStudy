@@ -104,6 +104,8 @@ public class TempController {
         System.out.println(arr[3]+"의 카운트는 " + count3);
         System.out.println(arr[4]+"의 카운트는 " + count4);
 
+        
+        
     }
 
     }
