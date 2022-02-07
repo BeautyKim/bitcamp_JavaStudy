@@ -63,34 +63,30 @@ public class QuizServiceImpl implements QuizService{
     @Override
     public void quiz4(String[] arr) {
         System.out.println("Q4. 팀원별 과제 수를 출력하세요 ");
-        int count = 0;
-        String countManager = "";
-        int count0 = 0;
-        int count1 = 0;
-        int count2 = 0;
-        int count3 = 0;
-        int count4 = 0;
+
         int[] intArr = new int[5];
 
-        for(int i=0; i<arr.length; i++){
-            if(arr[i].equals(arr[11])){
-                count0++;
-            }if(arr[i].equals(arr[6])){
-                count1++;
-            }if(arr[i].equals(arr[14])){
-                count2++;
-            }if(arr[i].equals(arr[7])){
-                count3++;
-            }if(arr[i].equals(arr[8])){
-                count4++;
+        for(int i=5; i<arr.length; i++){
+            int a = i % 5;
+
+            if(a == 0){
+                intArr[0]++;
+            }if(a == 1){
+                intArr[1]++;
+            }if(a == 2){
+                intArr[2]++;
+            }if(a == 3){
+                intArr[3]++;
+            }if(a == 4){
+                intArr[4]++;
             }
         }
 
-        System.out.println(arr[0]+"의 카운트는 " + count0);
-        System.out.println(arr[1]+"의 카운트는 " + count1);
-        System.out.println(arr[2]+"의 카운트는 " + count2);
-        System.out.println(arr[3]+"의 카운트는 " + count3);
-        System.out.println(arr[4]+"의 카운트는 " + count4);
+        System.out.println(arr[0]+"의 카운트는 " + intArr[0]);
+        System.out.println(arr[1]+"의 카운트는 " + intArr[1]);
+        System.out.println(arr[2]+"의 카운트는 " + intArr[2]);
+        System.out.println(arr[3]+"의 카운트는 " + intArr[3]);
+        System.out.println(arr[4]+"의 카운트는 " + intArr[4]);
 
     }
 }
