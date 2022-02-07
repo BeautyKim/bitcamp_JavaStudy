@@ -15,36 +15,93 @@ import java.util.Scanner;
  */
 public class Feb07ServiceImpl implements Feb07Service{
     @Override
-    public void dice(Scanner scanner) {
-        System.out.println("주사위 문제");
-        String res = " ";
-        int num = (int)(Math.random() * 6 +1);
-        if(num==1){
-            res = "1번이 나왔습니다.";
-        }else if(num==2){
-            res = "2번이 나왔습니다.";
-        }else if(num==3){
-            res = "3번이 나왔습니다.";
-        }else if(num==4){
-            res = "4번이 나왔습니다.";
-        }else if(num==5){
-            res = "5번이 나왔습니다.";
-        }if(num==6){
-            res = "6번이 나왔습니다.";
-        }
+    public void dice(Scanner scanner) {String res = " ";
+        int start = 0;
+        int dice1 = (int) (Math.random() * 6 + 1);
+        int dice2 = (int) (Math.random() * 6 + 1);
+
+        System.out.println("숫자 0을 입력하면 게임이 시작합니다.");
+        if(start == scanner.nextInt()) {
+            System.out.println("사용자가 주사위를 던집니다.");
+            System.out.println(dice1);
+            System.out.println("컴퓨터가 주사위를 던집니다.");
+            System.out.println(dice2);}
+
+        if(dice1>dice2) {
+            res = "사용자가 이겼습니다.";
+        }else if(dice1 == dice2){
+            res = "비겼습니다.";
+        } else res = "컴퓨터가 이겼습니다.";
         System.out.println(res);
 
     }
 
     @Override
     public void rps(Scanner scanner) {
+        while (true){
+            System.out.println("###가위바위보 게임###\n" +
+                    "0.종료 1.가위 2.바위 3.보");
+            int user = scanner.nextInt();
+            int com = (int)(Math.random() * 3);
+            String s = "";
+            String[] arrrps = new String[3];
+            arrrps[0] = "가위";
+            arrrps[1] = "바위";
+            arrrps[2] = "보";
+            switch (user){
+                case 0: System.out.println("가위바위보 종료"); return;
+                case 1:
+                    System.out.println("유저는"+arrrps[user-1]+", 컴퓨터는"+arrrps[com]+"을(를)냈습니다.");
+                    if (com ==0){
+                        s = "비겼습니다.";
+                    } else if(com == 1){
+                        s = "컴퓨터가 이겼습니다.";
+                    } else {
+                        s = "유져가 이겼습니다.";
+                    } break;
+                case 2:
+                    System.out.println("유저는"+arrrps[user-1]+", 컴퓨터는"+arrrps[com]+"을(를)냈습니다.");
+                    if (com ==0){
+                        s = "유져가 이겼습니다.";
+                    } else if(com == 1){
+                        s = "비겼습니다.";
+                    } else {
+                        s = "컴퓨터가 이겼습니다.";
+                    }break;
+                case 3:
+                    System.out.println("유저는"+arrrps[user-1]+", 컴퓨터는"+arrrps[com]+"을(를)냈습니다.");
+                    if (com ==0){
+                        s = "컴퓨터가 이겼습니다.";
+                    } else if(com == 1){
+                        s = "유져가 이겼습니다.";
+                    } else {
+                        s = "비겼습니다.";
+                    }break;
+                default:
+                    s = "잘못 입력하셨습니다."; break;
+            }
 
+            System.out.println(s);
+        }
     }
 
     @Override
     public void gerPrime(Scanner scanner) {
+        int count=0;
+        System.out.println("100이하의 숫자를 입력(소수 구하기) : ");
+        int number = scanner.nextInt();
 
-
+        for (int i = 2; i < number; i++) {
+            for(int j=2; j<=i;j++){
+                if(i%j ==0){
+                    count++;
+                }
+            }
+            if(count==1){
+                System.out.print(i+"\t");
+            }
+            count =0;
+        }
     }
 
     @Override
