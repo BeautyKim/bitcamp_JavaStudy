@@ -26,11 +26,11 @@ import java.util.Scanner;
  * */
 public class Feb07Controller {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         Feb07Service service = new Feb07ServiceImpl();
-        System.out.println("1. 주사위 \n"+"2. 가위바위보 \n"+"3. 입력받은 두 수 사이에 있는 소수 구하기 \n"+"4. 자바로 입력받은 연도가 윤년인지 평년인지 판단하기 \n"+"5. 임의로 입력받은 숫자 맞추기(numberGolf)");
+        String res = "";
         while (true){
-            Scanner scanner = new Scanner(System.in);
-            String res = "";
+            System.out.println("1. 주사위 \n"+"2. 가위바위보 \n"+"3. 입력받은 두 수 사이에 있는 소수 구하기 \n"+"4. 자바로 입력받은 연도가 윤년인지 평년인지 판단하기 \n"+"5. 임의로 입력받은 숫자 맞추기(numberGolf)");
             switch (scanner.next()){
                 case "0":
                     System.out.println("시스템 종료"); return;
@@ -54,6 +54,7 @@ public class Feb07Controller {
             System.out.println(res);
 
         }
+
     }
 
 
