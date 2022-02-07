@@ -36,18 +36,17 @@ public class Feb07ServiceImpl implements Feb07Service{
 
     @Override
     public void numberGolf(Scanner scanner) {
-        System.out.println("5. 임의로 입력받은 숫자 맞추기");
+        System.out.println("5. 임의로 입력받은 숫자 맞추기\n"+"1~100 숫자 입력");
         int count = 0;
         int num = (int)(Math.random() * 100)+1;
-
-        Scanner res = new Scanner(System.in);
-
         int num_enter = 0;
+        Scanner cho = new Scanner(System.in);
 
         while (num != num_enter){
-            System.out.println("1~100 숫자 입력");
-            num_enter = res.nextInt();
-            if(num > num_enter){
+            num_enter = cho.nextInt();
+            if(num_enter >= 101){
+                System.out.println("숫자를 1부터 100까지 입력해주세요.");}
+            else if(num > num_enter){
                 System.out.println("UP");
                 count++;
             }else if(num < num_enter){
@@ -55,8 +54,8 @@ public class Feb07ServiceImpl implements Feb07Service{
                 count++;
             }
         }
-        System.out.println("정답입니다" + count +"회 만에 맞췄어요.");
-        res.close();
+        System.out.println("정답입니다\t" + count +"회 만에 맞췄어요.");
+        cho.close();
 
     }
 }
