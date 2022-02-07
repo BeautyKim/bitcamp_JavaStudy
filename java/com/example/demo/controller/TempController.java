@@ -23,22 +23,61 @@ import java.util.Scanner;
  */
 public class TempController {
     public static void main(String[] args) {
-        System.out.println(" Q1. 팀별 과제를 출력하세요 ");
+        System.out.println("0: 종료 1: quiz1 2: quiz2 3: quiz3 4:quiz4 \t");
 
-        String[] arr = {"김아름", "유재혁", "장원종", "강민", "최건일",
-                          "스택", "해시", "Brute Force", "DP", "Bin",
-                           "큐", "sort", "DFS", "그래프",
-                          "힙",           "BFS",             "Greedy"};
-        String s = "";
-        for(int i = 0; i < arr.length; i++){
-            if(i%5==0){
-                s += "\n";
+        while (true){
+            String[] arr = {"김아름", "유재혁", "장원종", "강민", "최건일",
+                    "스택", "해시", "Brute Force", "DP", "Bin",
+                    "큐", "sort", "DFS", "그래프",
+                    "힙",           "BFS",             "Greedy"};
+            Scanner scanner = new Scanner(System.in);
+            String s = "";
+            switch (scanner.next()){
+                case "0":
+                    System.out.println("시스템 종료"); return;
+                case "1":
+                    quiz1(arr);
+                    break;
+                case "2":
+                    quiz2(arr);
+                    break;
+                case "3":
+                    quiz3(arr);
+                    break;
+                case "4":
+                    quiz4();
+                    break;
+                default: s = "다시 입력해주세요.";
+
             }
-            s += arr[i]+"\t";
+            System.out.println(s);
+        }
+
+
+    }
+
+    private static void quiz4() {
+        System.out.println("Q4. 팀원별 과제 수를 출력하세요 ");
+        int count = 0;
+        String countManager = "";
+
+    }
+
+    private static void quiz3(String[] arr) {
+
+        System.out.println("Q3. 큐를 담당한 사람을 출력하세요 ");
+        String s;
+        s = "";
+        String q = "큐";
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i].equals(q)){
+                s += arr[i] +"를 담당한 사람: " + arr[i%5];
+            }
         }
         System.out.println(s+"\n");
+    }
 
-
+    private static void quiz2(String[] arr) {
         System.out.println("Q2. 팀장이 맡은 과제만 출력하세요 ");
         String zzang = "";
         String name = "강민";
@@ -52,23 +91,19 @@ public class TempController {
                 }
             }
         System.out.println(zzang+"\n");
+    }
 
-        s = "";
-        String q = "큐";
-        System.out.println("Q3. 큐를 담당한 사람을 출력하세요 ");
+    private static void quiz1(String[] arr) {
+        System.out.println(" Q1. 팀별 과제를 출력하세요 ");
+        String s = "";
         for(int i = 0; i < arr.length; i++){
-            if(arr[i].equals(q)){
-                s += arr[i] +"를 담당한 사람: " + arr[i%5];
+            if(i%5==0){
+                s += "\n";
             }
+            s += arr[i]+"\t";
         }
+
         System.out.println(s+"\n");
-
-
-
-        System.out.println("Q4. 팀원별 과제 수를 출력하세요 ");
-        int count = 0;
-        String countManager = "";
-
     }
 
-    }
+}
