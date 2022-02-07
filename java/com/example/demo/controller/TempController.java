@@ -45,7 +45,7 @@ public class TempController {
                     quiz3(arr);
                     break;
                 case "4":
-                    quiz4();
+                    quiz4(arr);
                     break;
                 default: s = "다시 입력해주세요.";
 
@@ -56,10 +56,36 @@ public class TempController {
 
     }
 
-    private static void quiz4() {
+    private static void quiz4(String[] arr) {
         System.out.println("Q4. 팀원별 과제 수를 출력하세요 ");
         int count = 0;
         String countManager = "";
+        int count0 = 0;
+        int count1 = 0;
+        int count2 = 0;
+        int count3 = 0;
+        int count4 = 0;
+        int[] intArr = new int[5];
+
+        for(int i=0; i<arr.length; i++){
+            if(arr[i].equals(arr[11])){
+                count0++;
+            }if(arr[i].equals(arr[6])){
+                count1++;
+            }if(arr[i].equals(arr[14])){
+                count2++;
+            }if(arr[i].equals(arr[7])){
+                count3++;
+            }if(arr[i].equals(arr[8])){
+                count4++;
+            }
+        }
+
+        System.out.println(arr[0]+"의 카운트는 " + count0);
+        System.out.println(arr[1]+"의 카운트는 " + count1);
+        System.out.println(arr[2]+"의 카운트는 " + count2);
+        System.out.println(arr[3]+"의 카운트는 " + count3);
+        System.out.println(arr[4]+"의 카운트는 " + count4);
 
     }
 
