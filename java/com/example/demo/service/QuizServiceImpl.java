@@ -65,28 +65,20 @@ public class QuizServiceImpl implements QuizService{
         System.out.println("Q4. 팀원별 과제 수를 출력하세요 ");
 
         int[] intArr = new int[5];
+        int[] resArr = new int[5];
 
         for(int i=5; i<arr.length; i++){
             int a = i % 5;
-
-            if(a == 0){
-                intArr[0]++;
-            }if(a == 1){
-                intArr[1]++;
-            }if(a == 2){
-                intArr[2]++;
-            }if(a == 3){
-                intArr[3]++;
-            }if(a == 4){
-                intArr[4]++;
+            for(int j = 0; j < 5; j++){
+                if (a == j){
+                    intArr[j]++;
+                }
+                resArr = intArr;
             }
         }
-
-        System.out.println(arr[0]+"의 카운트는 " + intArr[0]);
-        System.out.println(arr[1]+"의 카운트는 " + intArr[1]);
-        System.out.println(arr[2]+"의 카운트는 " + intArr[2]);
-        System.out.println(arr[3]+"의 카운트는 " + intArr[3]);
-        System.out.println(arr[4]+"의 카운트는 " + intArr[4]);
+        for (int i = 0; i<5; i++){
+            System.out.println(arr[i]+"의 과제 수 ("+intArr[i]+"),");
+        }
 
     }
 }
