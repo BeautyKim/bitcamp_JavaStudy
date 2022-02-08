@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * packageName:  com.example.demo.quiz.service
- * fileName     : Feb08ServiceImpl
+ * fileName     : test
  * author       : ahreum
  * date         : 2022-02-08
  * desc         :
@@ -13,19 +13,9 @@ import java.util.Scanner;
  * ================================
  * 2022-02-08      ahreum        최초 생성
  */
-public class Feb08ServiceImpl implements Feb08Service{
-    @Override
-    public void lotto(Scanner scanner) {
-
-    }
-
-    @Override
-    public void baseball(Scanner scanner) {
-
-    }
-
-    @Override
-    public void booking(Scanner scanner) {
+public class test {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
             int seat[] = new int[22];
             int reserved;
             String s = "";
@@ -39,13 +29,13 @@ public class Feb08ServiceImpl implements Feb08Service{
                         String name = scanner.next();
                         System.out.println("현재 예약상태");
                         for(int i = 0; i<22; i++){
-                            s += i+1+"\t\n";
+                            s += i+1+"\t";
                         }
                         System.out.println(s);
 
                         for (int i : seat)
                             System.out.print(i+"\t");
-                        System.out.println("좌석선택");
+                        System.out.println("\n좌석선택");
                         reserved = scanner.nextInt();
 
                         seat[reserved - 1]=1;
@@ -56,14 +46,4 @@ public class Feb08ServiceImpl implements Feb08Service{
                 }
             }
         }
-
-    @Override
-    public void bank(Scanner scanner) {
-
     }
-
-    @Override
-    public void gugudan(Scanner scanner) {
-
-    }
-}
