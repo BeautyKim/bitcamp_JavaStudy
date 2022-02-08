@@ -11,5 +11,19 @@ package com.example.demo.algorithm.service;
  * ================================
  * 2022-02-08      ahreum        최초 생성
  */
-public class SortServiceImpl {
+public class SortServiceImpl implements SortService{
+    @Override
+    public int[] kNum(int[] array, int[][] commands) {
+        return new int[0];
+    }
+
+    @Override
+    public String bigNum(int[] numbers) {
+        return null;
+    }
+
+    @Override
+    public int hIndex(int[] citations) {
+        return 0;
+    }
 }

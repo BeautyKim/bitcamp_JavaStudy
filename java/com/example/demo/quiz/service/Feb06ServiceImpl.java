@@ -1,7 +1,5 @@
 package com.example.demo.quiz.service;
 
-import com.example.demo.quiz.service.QuizService;
-
 /**
  * packageName:  com.example.demo.service
  * fileName     : QuizService
@@ -13,7 +11,7 @@ import com.example.demo.quiz.service.QuizService;
  * ================================
  * 2022-02-07      ahreum        최초 생성
  */
-public class QuizServiceImpl implements QuizService {
+public class Feb06ServiceImpl implements Feb06Service {
     @Override
     public void quiz1(String[] arr) {
         System.out.println(" Q1. 팀별 과제를 출력하세요 ");

@@ -1,8 +1,5 @@
 package com.example.demo.quiz.controller;
 
-import com.example.demo.quiz.service.QuizService;
-import com.example.demo.quiz.service.QuizServiceImpl;
-
 import java.util.Scanner;
 
 /**

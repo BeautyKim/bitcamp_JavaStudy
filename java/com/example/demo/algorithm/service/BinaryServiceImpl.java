@@ -11,5 +11,14 @@ package com.example.demo.algorithm.service;
  * ================================
  * 2022-02-08      ahreum        최초 생성
  */
-public class BinaryServiceImpl{
+public class BinaryServiceImpl implements BinaryService{
+    @Override
+    public long audit(int n, int[] times) {
+        return 0;
+    }
+
+    @Override
+    public int bridge(int distance, int[] rocks, int n) {
+        return 0;
+    }
 }

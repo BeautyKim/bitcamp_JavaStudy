@@ -1,7 +1,7 @@
 package com.example.demo.quiz.controller;
 
-import com.example.demo.quiz.service.QuizService;
-import com.example.demo.quiz.service.QuizServiceImpl;
+import com.example.demo.quiz.service.Feb06Service;
+import com.example.demo.quiz.service.Feb06ServiceImpl;
 
 import java.util.Scanner;
 
@@ -18,18 +18,16 @@ import java.util.Scanner;
  */
 public class Feb06Controller {
     public void execute(Scanner scanner) {
-
+        Feb06Service service = new Feb06ServiceImpl();
         String[] arr = {"김아름", "유재혁", "장원종", "강민", "최건일",
                 "스택", "해시", "Brute Force", "DP", "Bin",
                 "큐", "sort", "DFS", "그래프",
                 "힙", "BFS", "Greedy"};
-        QuizService service = new QuizServiceImpl();
 
         while (true) {
             System.out.println("0: 종료 1: quiz1 2: quiz2 3: quiz3 4:quiz4 \t");
-            Scanner cho = new Scanner(System.in);
             String s = "";
-            switch (cho.next()) {
+            switch (scanner.next()) {
                 case "0":
                     System.out.println("시스템 종료");
                     return;
@@ -51,5 +49,7 @@ public class Feb06Controller {
             }
             System.out.println(s);
         }
+
+
     }
 }

@@ -13,4 +13,6 @@ package com.example.demo.algorithm.service;
  */
 public interface BruteForceService {
     int[] supo(int[] answers);
+    int primenum(String numbers);
+    int[] carp(int brown, int yellow);
 }
