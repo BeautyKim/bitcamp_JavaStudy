@@ -38,12 +38,12 @@ public class Feb08ServiceImpl implements Feb08Service{
                         String name = scanner.next();
                         System.out.println("현재 예약상태");
                         for(int i = 0; i<22; i++){
-                            System.out.println(i+1+"");
+                            System.out.print(i+1+"\t");
                         }
                         System.out.println();
 
                         for (int i : seat)
-                            System.out.println(i+"");
+                            System.out.print(i+"\t");
                         System.out.println();
                         System.out.print("좌석선택");
                         reserved = scanner.nextInt();
@@ -54,8 +54,6 @@ public class Feb08ServiceImpl implements Feb08Service{
                     default:
                         System.out.println("메뉴를 다시 선택해주세요");
                 }
-
-
             }
         }
 
