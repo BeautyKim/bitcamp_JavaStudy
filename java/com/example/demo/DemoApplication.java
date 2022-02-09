@@ -1,8 +1,7 @@
 package com.example.demo;
 
 import com.example.demo.algorithm.controller.AlgorithmController;
-import com.example.demo.phone.controller.PhoneController;
-import com.example.demo.quiz.controller.Feb07Controller;
+import com.example.demo.oop.controller.OopController;
 import com.example.demo.quiz.controller.QuizController;
 import com.example.demo.member.controller.MemberController;
 import org.springframework.boot.SpringApplication;
@@ -16,7 +15,7 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 		Scanner scanner = new Scanner(System.in);
-		PhoneController phoneController = new PhoneController();
+		OopController phoneController = new OopController();
 		QuizController quizController = new QuizController();
 		MemberController memberController = new MemberController();
 		AlgorithmController algorithmController = new AlgorithmController();
