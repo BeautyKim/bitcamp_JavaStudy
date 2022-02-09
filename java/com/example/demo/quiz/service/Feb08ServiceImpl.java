@@ -35,9 +35,9 @@ public class Feb08ServiceImpl implements Feb08Service{
                 case "0":
                     System.out.println("예약을 종료하겠습니다.");return;
                 case "1":
-                    System.out.println("이름");
+                    System.out.println("예약자의 이름을 입력해주세요");
                     String name = scanner.next();
-                    System.out.println("현재 예약상태");
+                    System.out.println("현재 좌석 상태");
                     for(int i = 0; i<22; i++){
                         s += i+1+"\t";
                     }
@@ -45,11 +45,10 @@ public class Feb08ServiceImpl implements Feb08Service{
 
                     for (int i : seat)
                         System.out.print(i+"\t");
-                    System.out.println("\n좌석선택");
-                    reserved = scanner.nextInt();
+                        System.out.println("\n좌석선택");
+                        reserved = scanner.nextInt();
 
-                    seat[reserved - 1]=1;
-                    System.out.println(name+"님 예약되었습니다.");
+                    System.out.println(name+"님 "+reserved+" 번 자리에 예약되었습니다.");
                     break;
                 default:
                     System.out.println("메뉴를 다시 선택해주세요");

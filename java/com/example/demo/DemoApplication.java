@@ -22,7 +22,7 @@ public class DemoApplication {
 
 
 		while (true){
-			System.out.println("1.Exit 2.Auth 3.OOP 4.Quiz 5.Algorithm");
+			System.out.println("0.Exit 1.Auth 2.OOP 3.Quiz 4.Algorithm");
 			switch (scanner.next()){
 				case "0":
 					System.out.println("### Exit ###");return;

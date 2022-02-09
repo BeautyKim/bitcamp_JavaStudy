@@ -16,8 +16,8 @@ public class CelPhone extends Phone{
     private boolean portable;
     protected String move;
 
-    public CelPhone(String kine, String company){
-        super(kine, company);
+    public CelPhone(String kind, String company){
+        super(kind, company);
     }
 
     public boolean isPortable() {
