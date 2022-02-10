@@ -4,7 +4,7 @@ import com.example.demo.member.domain.BmiDTO;
 import com.example.demo.member.domain.CalcDTO;
 import com.example.demo.member.domain.GoogleDTO;
 import com.example.demo.member.domain.GradeDTO;
-import com.example.demo.member.domain.LoginDTO;
+import com.example.demo.member.domain.UserDTO;
 import com.example.demo.member.service.MemberService;
 import com.example.demo.member.service.MemberServiceImpl;
 
@@ -23,11 +23,11 @@ import java.util.Scanner;
  */
 public class MemberController {
     public void execute(Scanner scanner) {
-        CalcDTO calc = new CalcDTO();
-        BmiDTO bmi = new BmiDTO();
-        GoogleDTO google = new GoogleDTO();
-        GradeDTO grade = new GradeDTO();
-        LoginDTO login = new LoginDTO();
+        CalcDTO calc = CalcDTO.getInstance();
+        BmiDTO bmi = BmiDTO.getInstance();
+        GoogleDTO google = GoogleDTO.getInstance();
+        GradeDTO grade = GradeDTO.getInstance();
+        UserDTO login = UserDTO.getInstance();
         MemberService service = new MemberServiceImpl();
         while (true){
             System.out.println("메뉴 선택");
@@ -41,36 +41,41 @@ public class MemberController {
                     System.out.println("Exit"); return;
                 case "1":
                     System.out.println(BmiDTO.BMI+"\n이름, 키, 몸무게");
-                    bmi.setName(scanner.next());
-                    bmi.setTall(scanner.nextInt());
-                    bmi.setWeight(scanner.nextInt());
+                    BmiDTO b = BmiDTO.getInstance();
+                    b.setName(scanner.next());
+                    b.setTall(scanner.nextInt());
+                    b.setWeight(scanner.nextInt());
                     res = service.getBmi(bmi);
                 break;
                 case "2":
                     System.out.println(CalcDTO.CALC_TITLE+"\n숫자1, 연산자, 숫자2 입력");
-                    calc.setNum1(scanner.nextInt());
-                    calc.setOpcode(scanner.next());
-                    calc.setNum2(scanner.nextInt());
+                    CalcDTO c = CalcDTO.getInstance();
+                    c.setNum1(scanner.nextInt());
+                    c.setOpcode(scanner.next());
+                    c.setNum2(scanner.nextInt());
                     res = service.getCalc(calc);
                     break;
                 case "3":
                     System.out.println(GoogleDTO.GOOGLE_TITLE +"\n검색");
-                    google.setSearch(scanner.next());
+                    GoogleDTO go = GoogleDTO.getInstance();
+                    go.setSearch(scanner.next());
                     res = service.getSearch(google);
                     break;
                 case "4":
                     System.out.println(GradeDTO.GRADE_TITLE +"\n이름, 국어, 영어, 수학");
-                    grade.setName(scanner.next());
-                    grade.setKor(scanner.nextInt());
-                    grade.setEng(scanner.nextInt());
-                    grade.setMath(scanner.nextInt());
+                    GradeDTO gr = GradeDTO.getInstance();
+                    gr.setName(scanner.next());
+                    gr.setKor(scanner.nextInt());
+                    gr.setEng(scanner.nextInt());
+                    gr.setMath(scanner.nextInt());
                     res = service.getGrade(grade);
                     break;
                 case "5":
-                    System.out.println(LoginDTO.LOGIN_APP +"\n이름, 아이디, 비번");
-                    login.setId(scanner.next());
-                    login.setPw(scanner.next());
-                    login.setName(scanner.next());
+                    System.out.println(UserDTO.LOGIN_APP +"\n이름, 아이디, 비번");
+                    UserDTO u = UserDTO.getInstance();
+                    u.setId(scanner.next());
+                    u.setPw(scanner.next());
+                    u.setName(scanner.next());
                     res = service.getLogin(login);
                     break;
                 default: res = "다시 입력해주세요.";

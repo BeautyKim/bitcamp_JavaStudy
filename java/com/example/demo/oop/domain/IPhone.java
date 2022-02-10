@@ -1,5 +1,7 @@
 package com.example.demo.oop.domain;
 
+import com.example.demo.member.domain.CalcDTO;
+
 /**
  * packageName:  com.example.demo.phone.domain
  * fileName     : IPhone
@@ -11,12 +13,12 @@ package com.example.demo.oop.domain;
  * ================================
  * 2022-02-09      ahreum        최초 생성
  */
-public class IPhone extends CelPhone{
+public class IPhone extends CelPhone {
     public final static String KIND = "아이폰";
     protected String search;
 
     public IPhone(String company){
-        super(KIND,company);
+        super(KIND, company, "이동");
     }
 
     public String getSearch() {

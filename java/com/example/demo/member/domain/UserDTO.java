@@ -12,9 +12,14 @@ package com.example.demo.member.domain;
  * 2022-01-25      ahreum        최초 생성
  */
 
-public class LoginDTO {
+public class UserDTO {
     public static String LOGIN_APP = "로그인앱";
-    String id;
+
+    private final static UserDTO userDTO = new UserDTO();
+    private UserDTO(){}
+    public static  UserDTO getInstance(){return userDTO;}
+
+        String id;
         String pw;
         String name;
         public static String PASSWORD = "abc";

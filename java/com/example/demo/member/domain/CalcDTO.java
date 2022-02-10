@@ -1,6 +1,8 @@
 package com.example.demo.member.domain;
 
 
+import jdk.jshell.Snippet;
+
 /**
  * packageName:  com.example.demo.calc
  * fileName     : CalcApp.java
@@ -15,9 +17,16 @@ package com.example.demo.member.domain;
 
 public class CalcDTO {
     public static String CALC_TITLE = "계산기";
+
+    private final static CalcDTO calcDTO = new CalcDTO();
+    private CalcDTO(){}
+    public static CalcDTO getInstance(){return calcDTO;}
+
+
     private int num1;
     private String opcode;
     private int num2;
+
 
     public int getNum1(){
         return this.num1;

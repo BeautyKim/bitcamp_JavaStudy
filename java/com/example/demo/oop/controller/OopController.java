@@ -38,7 +38,7 @@ public class OopController {
                 case "2":
                     System.out.println("extends 가 상속이다");
                     Phone phone = new Phone("금성전화기", "금성전자");
-                    CelPhone celPhone = new CelPhone("연아의 햅틱", "삼성");
+                    CelPhone celPhone = new CelPhone("연아의 햅틱", "삼성", "");
                     IPhone iPhone = new IPhone("애플");
                     GalPhone galPhone = new GalPhone("삼성");
                     PhoneService phoneService = new PhoneServiceImpl();
@@ -58,13 +58,13 @@ public class OopController {
                             phoneService.useCelPhone(celPhone);break;
                         case "3":
                             System.out.println("#### 아이폰 ###");
-                            iPhone.setCall("Hi~");
+                            //iPhone.setCall("Hi~");
                             iPhone.setSearch("검색");
-                            iPhone.setMove("이동");
+                            //iPhone.setMove("이동");
                             phoneService.useIPhone(iPhone);break;
                         case "4":
                             System.out.println("### 갤럭시 ###");
-                            galPhone.setCall("안녕하세요");
+                            //galPhone.setCall("안녕하세요");
                             galPhone.setPay("삼성페이");
                             phoneService.useGalPhone(galPhone);
 
