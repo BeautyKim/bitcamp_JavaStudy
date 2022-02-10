@@ -16,8 +16,8 @@ import java.util.Scanner;
 public interface Feb09Service {
     void sort1(Scanner scanner);
     void sort2(Scanner scanner);
-    void sort3(Scanner scanner);
-    void sort4(Scanner scanner);
-    void sort5(Scanner scanner);
+    void magicSquare(Scanner scanner);
+    void zigzag(Scanner scanner);
+    void print(Scanner scanner);
 }
 

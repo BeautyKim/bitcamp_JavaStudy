@@ -9,9 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Scanner;
 
-@SpringBootApplication
 public class DemoApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 		Scanner scanner = new Scanner(System.in);
@@ -39,7 +37,7 @@ public class DemoApplication {
 					System.out.println("### Algorithm ###");
 					algorithmController.execute(scanner);break;
 				default:
-					System.out.println("Wrong Number");
+					System.out.println("Wrong Number");break;
 			}
 		}
 

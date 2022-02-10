@@ -22,7 +22,6 @@ public class Feb09ServiceImpl implements Feb09Service{
         int[] num = new int[10];
         for(int i = 0; i<10; i++){
             num[i] = (int) (Math.random()*100)+1;
-            if()
         }
 
 
@@ -36,9 +35,6 @@ public class Feb09ServiceImpl implements Feb09Service{
 
 
         // selectionSort
-
-
-
     }
 
     @Override
@@ -47,17 +43,17 @@ public class Feb09ServiceImpl implements Feb09Service{
     }
 
     @Override
-    public void sort3(Scanner scanner) {
+    public void magicSquare(Scanner scanner) {
 
     }
 
     @Override
-    public void sort4(Scanner scanner) {
+    public void zigzag(Scanner scanner) {
 
     }
 
     @Override
-    public void sort5(Scanner scanner) {
+    public void print(Scanner scanner) {
 
     }
 }
