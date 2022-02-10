@@ -1,4 +1,4 @@
-package com.example.demo.oop.repository;
+package com.example.demo.quiz.controller;
 
 import com.example.demo.oop.controller.OopController;
 import com.example.demo.oop.domain.CelPhone;
@@ -25,8 +25,8 @@ public class Test {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("테스트");
-        OopController oopController = new OopController();
-        oopController.execute(scanner);
+        Feb09Controller feb09Controller = new Feb09Controller();
+        feb09Controller.execute(scanner);
     }
 
 }
