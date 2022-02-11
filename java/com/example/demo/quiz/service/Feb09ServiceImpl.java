@@ -18,11 +18,15 @@ public class Feb09ServiceImpl implements Feb09Service{
     @Override
     public void sort1(Scanner scanner) {
         //bubbleSort
+        System.out.println("#### 버블 정렬 ####");
         int bubbleSort;
-        int[] num = new int[10];
-        for(int i = 0; i<10; i++){
-            num[i] = (int) (Math.random()*100)+1;
+        Random random = new Random();
+        random.setSeed(System.currentTimeMillis());
+
+        for(int i = 0; i <= 10; i++){
+            int num = (random.nextInt(100)+1);
         }
+
 
 
 

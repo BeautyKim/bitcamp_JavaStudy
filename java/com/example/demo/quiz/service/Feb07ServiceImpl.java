@@ -119,6 +119,14 @@ public class Feb07ServiceImpl implements Feb07Service {
         }
 
     }
+/**
+ * author       : 김아름
+ * desc         :
+ *
+ *
+ *
+ *
+ * */
 
     @Override
     public void numberGolf(Scanner scanner) {

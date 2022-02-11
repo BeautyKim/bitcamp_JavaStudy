@@ -29,7 +29,7 @@ public class QuizController {
         Feb09Service feb09Service = new Feb09ServiceImpl();
 
         while (true) {
-            System.out.println("[서브메뉴]\n 0)Exit 1)2월6일 2)2월7일 3)2월8일 ");
+            System.out.println("[서브메뉴]\n 0)Exit 1)2월6일 2)2월7일 3)2월8일 4)2월10일");
             switch (scanner.next()) {
                 case "0":
                     System.out.println("### Exit ###");
