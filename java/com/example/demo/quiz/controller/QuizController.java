@@ -94,7 +94,7 @@ public class QuizController {
                             System.out.println("### Wrong Number ###");
                     }
                 case "3":
-                    System.out.println("[소메뉴]\n 0. Exit\n1. 로또\n2. 야구\n3. 좌석예약\n4. 은행 입출금\n5. 구구단");
+                    System.out.println("[소메뉴]\n0. Exit\n1. 로또\n2. 야구\n3. 좌석예약\n4. 은행 입출금\n5. 구구단");
                     switch (scanner.next()){
                         case "0":
                             System.out.println("### 종료 ###");
@@ -118,7 +118,8 @@ public class QuizController {
                             System.out.println("### Wrong Number ###");break;
                     }
                 case "4":
-                    System.out.println("[소메뉴]\n 0.Exit\n1.버블,삽입,선택정렬\n2.\n3.\n4.\n5.");
+                    System.out.println("[소메뉴]\n 0.Exit\n1. 버블정렬, 삽입정렬, 선택정렬" +
+                                        "\n2. 퀵정렬, 머지정렬\n3. 마방진\n4. 지그재그\n5. 프린트");
                     switch (scanner.next()){
                         case "0":
                             System.out.println("### 종료 ###");return;
