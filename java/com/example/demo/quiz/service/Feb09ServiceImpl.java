@@ -14,7 +14,7 @@ import java.util.Scanner;
  * ================================
  * 2022-02-10      ahreum        최초 생성
  */
-public class Feb09ServiceImpl implements Feb09Service{
+public class Feb09ServiceImpl implements Feb09Service {
     @Override
     public void bubbleSort() {
 /**
@@ -32,23 +32,23 @@ public class Feb09ServiceImpl implements Feb09Service{
  * */
         int[] arr = new int[10];
         System.out.println("정렬전: ");
-        for (int i = 0; i<arr.length; i++){
-            arr[i] = (int)(Math.random()*100)+1;
-            System.out.println("["+arr[i]+"]");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (int) (Math.random() * 100) + 1;
+            System.out.println("[" + arr[i] + "]");
         }
 
-        for (int j = 0; j < arr.length; j++){
-            for (int k = 0; k < arr.length-j-1; k++){
-                if (arr[k]>arr[k+1]){
+        for (int j = 0; j < arr.length; j++) {
+            for (int k = 0; k < arr.length - j - 1; k++) {
+                if (arr[k] > arr[k + 1]) {
                     int temp = arr[k];
-                    arr[k] = arr[k+1];
-                    arr[k+1] = temp;
+                    arr[k] = arr[k + 1];
+                    arr[k + 1] = temp;
                 }
             }
         }
         System.out.println("정렬후: ");
-        for (int j = 0; j < arr.length; j++){
-            System.out.println("["+arr[j]+"]");
+        for (int j = 0; j < arr.length; j++) {
+            System.out.println("[" + arr[j] + "]");
         }
     }
 
@@ -63,26 +63,25 @@ public class Feb09ServiceImpl implements Feb09Service{
         int[] arr = new int[10];
 
         System.out.println("정렬전: ");
-        for (int i = 0; i<arr.length; i++){
-            arr[i] = (int)(Math.random()*100)+1;
-            System.out.println("["+arr[i]+"]");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (int) (Math.random() * 100) + 1;
+            System.out.println("[" + arr[i] + "]");
         }
 
-        for (int j = 1; j < arr.length-1; j++) {
+        for (int j = 1; j < arr.length - 1; j++) {
             int insert = j;
             int temp = arr[j];
-            while ((insert > 0) && (arr[insert - 1] > temp)){
+            while ((insert > 0) && (arr[insert - 1] > temp)) {
                 arr[insert] = arr[insert - 1];
                 insert--;
             }
             arr[insert] = temp;
         }
         System.out.println("정렬후: ");
-        for (int j = 0; j < arr.length; j++){
-            System.out.println("["+arr[j]+"]");
+        for (int j = 0; j < arr.length; j++) {
+            System.out.println("[" + arr[j] + "]");
         }
     }
-
 
 
     @Override
@@ -93,9 +92,32 @@ public class Feb09ServiceImpl implements Feb09Service{
  *
  *
  * */
+        int[] arr = new int[10];
 
+        System.out.println("정렬전: ");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (int) (Math.random() * 100) + 1;
+            System.out.println("[" + arr[i] + "]");
+        }
 
+        for (int j = 0; j < arr.length - 1; j++) {
+            for (int k = j+1; k <arr.length; k++){
+                if (arr[j]>arr[k]){
+                    int temp = arr[j];
+                    arr[j] = arr[k];
+                    arr[k] = temp;
+                }
+
+            }
+        }
+
+        System.out.println("정렬후: ");
+        for (int j = 0; j < arr.length; j++) {
+            System.out.println("[" + arr[j] + "]");
+
+        }
     }
+
 
     @Override
     public void quickSort() {
