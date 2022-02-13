@@ -14,10 +14,14 @@ import java.util.Scanner;
  * 2022-02-10      ahreum        최초 생성
  */
 public interface Feb09Service {
-    void sort1(Scanner scanner);
-    void sort2(Scanner scanner);
-    void magicSquare(Scanner scanner);
-    void zigzag(Scanner scanner);
-    void print(Scanner scanner);
+    void bubbleSort();
+    void insertionSort();
+    void selectionSort();
+    void quickSort();
+    void mergeSort();
+    void magicSquare();
+    void zigzag();
+    void rectangleStarPrint();
+    void triangleStarPrint();
 }
 

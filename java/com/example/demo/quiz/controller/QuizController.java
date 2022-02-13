@@ -118,26 +118,38 @@ public class QuizController {
                             System.out.println("### Wrong Number ###");break;
                     }
                 case "4":
-                    System.out.println("[소메뉴]\n 0.Exit\n1. 버블정렬, 삽입정렬, 선택정렬" +
-                                        "\n2. 퀵정렬, 머지정렬\n3. 마방진\n4. 지그재그\n5. 프린트");
+                    System.out.println("[소메뉴]\n0.Exit\n1. 버블정렬 2. 삽입정렬 3. 선택정렬" +
+                                        "\n4. 퀵정렬 5.머지정렬\n6. 마방진 7. 지그재그 8. 직각삼각형 별찍기 9.정삼각형 별찍기");
                     switch (scanner.next()){
                         case "0":
                             System.out.println("### 종료 ###");return;
                         case "1":
-                            System.out.println("### 버블정렬, 삽입정렬, 선택정렬");
-                            feb09Service.sort1(scanner);break;
+                            System.out.println("### 버블정렬 ###");
+                            feb09Service.bubbleSort();break;
                         case "2":
-                            System.out.println("### 퀵정렬, 머지정렬 ###");
-                            feb09Service.sort2(scanner);break;
+                            System.out.println("### 삽입정렬 ###");
+                            feb09Service.insertionSort();break;
                         case "3":
-                            System.out.println("### 마방진 ###");
-                            feb09Service.magicSquare(scanner);break;
+                            System.out.println("### 선택정렬 ###");
+                            feb09Service.selectionSort();break;
                         case "4":
-                            System.out.println("### 지그재그 ###");
-                            feb09Service.zigzag(scanner);break;
+                            System.out.println("### 퀵정렬 ###");
+                            feb09Service.quickSort();break;
                         case "5":
-                            System.out.println("### 프린트 ###");
-                            feb09Service.print(scanner);break;
+                            System.out.println("### 머지정렬 ###");
+                            feb09Service.mergeSort();break;
+                        case "6":
+                            System.out.println("### 마방진 ###");
+                            feb09Service.magicSquare();break;
+                        case "7":
+                            System.out.println("### 지그재그 ###");
+                            feb09Service.zigzag();break;
+                        case "8":
+                            System.out.println("### 직각삼각형 별찍기 ###");
+                            feb09Service.rectangleStarPrint();break;
+                        case "9":
+                            System.out.println("### 정삼각형 별찍기 ###");
+                            feb09Service.triangleStarPrint();break;
                         default:
                             System.out.println("### Wrong Number ###");break;
 
