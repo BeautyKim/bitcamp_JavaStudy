@@ -28,5 +28,6 @@ public class Test {
         QuizController quizController = new QuizController();
         quizController.execute(scanner);
     }
+
 }
 
