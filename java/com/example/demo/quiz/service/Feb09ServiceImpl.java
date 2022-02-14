@@ -30,6 +30,7 @@ public class Feb09ServiceImpl implements Feb09Service {
  * 앞의 수가 뒤의 수보다 크다면 자리를 바꿔준다
  * temp -> 바꾸기 위한 변수
  * */
+
         int[] arr = new int[10];
         System.out.println("정렬전: ");
         for (int i = 0; i < arr.length; i++) {
