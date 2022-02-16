@@ -1,8 +1,5 @@
 package com.example.demo.quiz.service;
 
-import java.util.Random;
-import java.util.Scanner;
-
 /**
  * packageName:  com.example.demo.quiz.service
  * fileName     : Feb09ServiceImpl
@@ -14,7 +11,7 @@ import java.util.Scanner;
  * ================================
  * 2022-02-10      ahreum        최초 생성
  */
-public class Feb09ServiceImpl implements Feb09Service {
+public class Feb10ServiceImpl implements Feb10Service {
     @Override
     public void bubbleSort() {
 /**

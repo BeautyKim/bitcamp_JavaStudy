@@ -1,7 +1,5 @@
 package com.example.demo.quiz.service;
 
-import java.util.Scanner;
-
 /**
  * packageName:  com.example.demo.quiz.service
  * fileName     : Feb09Service
@@ -13,7 +11,7 @@ import java.util.Scanner;
  * ================================
  * 2022-02-10      ahreum        최초 생성
  */
-public interface Feb09Service {
+public interface Feb10Service {
     void bubbleSort();
     void insertionSort();
     void selectionSort();
