@@ -121,10 +121,14 @@ public class Feb07ServiceImpl implements Feb07Service {
     }
 /**
  * author       : 김아름
- * desc         :
- *
- *
- *
+ * desc         : 랜덤 정수로 1~100까지 UpDown 게임
+ * int count = 회전수
+ * int num = 랜덤값을 받는 int 타입의 변수
+ * int num_enter = 스케너로 입력 받는 변수
+ * while (num != num_enter) → num 값과 num_enter 값이 같지 않을 경우를 비교한다
+ * num_enter 값이 101보다 크거나 같으면 다시 입력
+ * num(컴퓨터 랜덤 값)이 num_enter 값(입력값) 보다 클 경우 “UP” 아니면 “DOWN”
+ * count++ → 답을 맞추지 못할 경우 count 입력값 1씩 증가
  *
  * */
 
@@ -141,7 +145,7 @@ public class Feb07ServiceImpl implements Feb07Service {
             num_enter = cho.nextInt();
             if(num_enter >= 101){
                 System.out.println("숫자를 1부터 100까지 입력해주세요.");}
-            else if(num > num_enter){
+            else if(num > num_enter ){
                 System.out.println("UP");
                 count++;
             }else if(num < num_enter){
