@@ -21,13 +21,5 @@ import java.util.Scanner;
  * ================================
  * 2022-02-09      ahreum        최초 생성
  */
-public class Test {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("테스트");
-        QuizController quizController = new QuizController();
-        quizController.execute(scanner);
-    }
 
-}
 

@@ -26,7 +26,7 @@ public class QuizController {
         Feb06Service feb06Service = new Feb06ServiceImpl();
         Feb07Service feb07Service = new Feb07ServiceImpl();
         Feb08Service feb08Service = new Feb08ServiceImpl();
-        Feb09Service feb09Service = new Feb09ServiceImpl();
+        Feb10Service feb10Service = new Feb10ServiceImpl();
 
         while (true) {
             System.out.println("[서브메뉴]\n 0)Exit 1)2월6일 2)2월7일 3)2월8일 4)2월10일");
@@ -125,31 +125,31 @@ public class QuizController {
                             System.out.println("### 종료 ###");return;
                         case "1":
                             System.out.println("### 버블정렬 ###");
-                            feb09Service.bubbleSort();break;
+                            feb10Service.bubbleSort();break;
                         case "2":
                             System.out.println("### 삽입정렬 ###");
-                            feb09Service.insertionSort();break;
+                            feb10Service.insertionSort();break;
                         case "3":
                             System.out.println("### 선택정렬 ###");
-                            feb09Service.selectionSort();break;
+                            feb10Service.selectionSort();break;
                         case "4":
                             System.out.println("### 퀵정렬 ###");
-                            feb09Service.quickSort();break;
+                            feb10Service.quickSort();break;
                         case "5":
                             System.out.println("### 머지정렬 ###");
-                            feb09Service.mergeSort();break;
+                            feb10Service.mergeSort();break;
                         case "6":
                             System.out.println("### 마방진 ###");
-                            feb09Service.magicSquare();break;
+                            feb10Service.magicSquare();break;
                         case "7":
                             System.out.println("### 지그재그 ###");
-                            feb09Service.zigzag();break;
+                            feb10Service.zigzag();break;
                         case "8":
                             System.out.println("### 직각삼각형 별찍기 ###");
-                            feb09Service.rectangleStarPrint();break;
+                            feb10Service.rectangleStarPrint();break;
                         case "9":
                             System.out.println("### 정삼각형 별찍기 ###");
-                            feb09Service.triangleStarPrint();break;
+                            feb10Service.triangleStarPrint();break;
                         default:
                             System.out.println("### Wrong Number ###");break;
 
